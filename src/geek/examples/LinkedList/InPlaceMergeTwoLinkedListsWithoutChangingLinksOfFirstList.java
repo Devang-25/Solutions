@@ -1,4 +1,4 @@
-package geek.examples;
+package geek.examples.LinkedList;
 
 public class InPlaceMergeTwoLinkedListsWithoutChangingLinksOfFirstList {
     public static void main(String[] args) {

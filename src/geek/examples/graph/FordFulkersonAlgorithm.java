@@ -1,4 +1,4 @@
-package geek.examples;
+package geek.examples.graph;
 
 import java.util.LinkedList;
 import java.util.Queue;

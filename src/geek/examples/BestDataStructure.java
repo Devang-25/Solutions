@@ -24,8 +24,8 @@ class BestDataStructure {
 	HashMap<Integer, Integer> hash;
 
 	public BestDataStructure() {
-		arr = new ArrayList<Integer>();
-		hash = new HashMap<Integer, Integer>();
+		arr = new ArrayList<>();
+		hash = new HashMap<>();
 	}
 
 	// A Theta(1) function to add an element to MyDS

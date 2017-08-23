@@ -1,4 +1,4 @@
-package geek.examples;
+package geek.examples.graph;
 
 import java.util.ArrayList;
 import java.util.Iterator;
