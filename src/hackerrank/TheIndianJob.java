@@ -1,7 +1,7 @@
 package hackerrank;
 
 import java.util.Scanner;
-
+//not understood
 public class TheIndianJob {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);

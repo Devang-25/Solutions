@@ -11,20 +11,16 @@ public class StockMaximize {
 		for (int t = 1; t <= testCases; t++) {
 			int days =  in.nextInt();
 			PriorityQueue<Prediction> pQ = new PriorityQueue<Prediction>(days,
-					new Comparator<Prediction>() {
-
-						@Override
-						public int compare(Prediction p1, Prediction p2) {
-							if (p1.val > p2.val) {
-								return -1;
-							} else if (p1.val == p2.val) {
-								if (p1.day < p2.day) {
-									return -1;
-								}
-							}
-							return 1;
-						}
-					});
+					(p1, p2) -> {
+                        if (p1.val > p2.val) {
+                            return -1;
+                        } else if (p1.val == p2.val) {
+                            if (p1.day < p2.day) {
+                                return -1;
+                            }
+                        }
+                        return 1;
+                    });
 			int val[] = new int[days];
 			for (int d = 0; d < days; d++) {
 				val[d] = /*(int) (10000 * Math.random());*/ in.nextInt();
