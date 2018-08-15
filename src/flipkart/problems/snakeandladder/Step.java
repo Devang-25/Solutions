@@ -7,7 +7,7 @@ import java.util.List;
 public class Step {
 	public Step(int i) {
 		this.stepNo = i;
-		gameObjects = new LinkedList<GameObject>();// catch here.
+		gameObjects = new LinkedList<>();// catch here.
 	}
 
 	public void addGameObject(GameObject obj) {

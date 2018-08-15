@@ -249,11 +249,11 @@ public class GraphAlgorithms {
     public static List<Edge> getBridges(GraphIterable graph) {
         bridgeList = new LinkedList<Edge>();
         System.out.println("Enter getBridges");
-        order = new HashMap<Integer, Integer>(graph.V());
-        low = new HashMap<Integer, Integer>(graph.V());
-        Iterator<Integer> vertice = graph.getVertexIterator();
-        while (vertice.hasNext()) {
-            int vertex = vertice.next();
+        order = new HashMap<>(graph.V());
+        low = new HashMap<>(graph.V());
+        Iterator<Integer> vertices = graph.getVertexIterator();
+        while (vertices.hasNext()) {
+            int vertex = vertices.next();
             low.put(vertex, Integer.MAX_VALUE);
             order.put(vertex, ord);
             ord++;
