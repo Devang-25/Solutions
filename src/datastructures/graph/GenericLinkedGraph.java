@@ -23,7 +23,7 @@ public class GenericLinkedGraph implements GraphIterable {
 
     public GenericLinkedGraph(boolean isDirected) {
         this.isDirected = isDirected;
-        map = new HashMap<Vertex, LinkedList<Edge>>();
+        map = new HashMap<>();
     }
 
     public int V() {

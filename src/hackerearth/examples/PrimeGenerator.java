@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PrimeGenerator {
 
-	public List<Integer> getPrimes(int minNumbers, int maxNumbers) {
+	public List<Integer> GgetPrimes(int minNumbers, int maxNumbers) {
 		List<Integer> primes = new ArrayList<Integer>();
 		primes.add(2);
 		primes.add(3);

@@ -24,7 +24,7 @@ import datastructures.priorityqueue.Pair;
 
 public class GraphAlgorithms {
 
-    public static void DFS(GraphIterable graph) {
+    public static void dfs(GraphIterable graph) {
         System.out.println("DFS");
         HashSet<Integer> visitedSet1 = new HashSet<Integer>();
         Iterator<Integer> vIter = graph.getVertexIterator();
@@ -52,16 +52,16 @@ public class GraphAlgorithms {
     }
 
     public static int[] topologicalSort(GraphIterable graph) {
-        LinkedList<Vertex> indegreeList = new LinkedList<Vertex>();
-        int sortedList[] = new int[graph.V()];
+        LinkedList<Vertex> inDegreeList = new LinkedList<Vertex>();
+        int[] sortedList = new int[graph.V()];
         Iterator<Integer> i = graph.getVertexIterator();
         int iter = 0;
         while (i.hasNext()) {
             Vertex v = graph.getVertex(i.next());
-            indegreeList.add(v);
+            inDegreeList.add(v);
         }
-        while (!indegreeList.isEmpty()) {
-            ListIterator<Vertex> lI = indegreeList.listIterator();
+        while (!inDegreeList.isEmpty()) {
+            ListIterator<Vertex> lI = inDegreeList.listIterator();
             while (lI.hasNext()) {
                 Vertex v = lI.next();
                 if (v.getInDegree() == 0) {
@@ -326,7 +326,7 @@ public class GraphAlgorithms {
         while (vIter.hasNext()) {
             mst.insert(vIter.next());
         }
-        Map<Integer, Edge> dMap = new HashMap<Integer, Edge>();//what better could be..
+        Map<Integer, Edge> dMap = new HashMap<>();//what better could be..
         vIter = graph.getVertexIterator();
         int v = 0;
         if (vIter.hasNext()) {//just a formality
